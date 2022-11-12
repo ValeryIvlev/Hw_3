@@ -6,16 +6,31 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation (
-            "com.codeborne:selenide:6.3.5",
-            "org.junit.jupiter:junit-jupiter:5.8.2")
-}
-
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+dependencies {
+    testImplementation (
+            "com.codeborne:selenide:6.9.0",
+            "org.junit.jupiter:junit-jupiter:5.8.2"
+    )
+}
+
 test {
-    useJUnitPlatform()
+   useJUnitPlatform()
+}
+
+help {
+    doFirst {
+        println ""
+        println "************************************************************************ "
+        println "***                                                                  *** "
+        println "*** Welcome to https://github.com/ValeryIvlev/Demoqa_test_1!         *** "
+        println "***                                                                  *** "
+        println "*** ./gradlew help                                                   *** "
+        println "***                                                                  *** "
+        println "************************************************************************ "
+        println ""
+    }
 }
