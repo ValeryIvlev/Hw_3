@@ -28,7 +28,7 @@ public class AutomationPracticeForm {
         // почему же простой клик не работает? загадка века блеать, надо разобрать.....
         $("#gender-radio-1").doubleClick();
         $("#userNumber").setValue("7999111123");
-        //Календарь
+        // Календарь
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").click();
         $(".react-datepicker__year-select").selectOption("1993");
@@ -36,7 +36,6 @@ public class AutomationPracticeForm {
         $(".react-datepicker__month-select").selectOption("July");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__day--004").click();
-
         $("#subjectsInput").setValue("Economics").pressEnter();
         // Поиск родительского элемента и только после этого кликает? ептааааа куда я попал)))) надо разобрать .....
         $("#hobbies-checkbox-1").parent().click();
@@ -47,7 +46,6 @@ public class AutomationPracticeForm {
         $("#react-select-3-input").setValue("NCR").pressEnter();
         $("#react-select-4-input").setValue("Noida").pressEnter();
         $("#submit").click();
-
         $(".table-responsive").shouldHave(text("Ivan Ivanov"), text("Mail@mail.ru"), text("male"), text("7999111123"),
                 text("04 July,1993"), text("Economics"), text("Sports"), text("File1.png"), text("Subject one or no one:)"),
                 text("NCR Noida") );
